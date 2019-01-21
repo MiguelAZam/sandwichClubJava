@@ -13,6 +13,8 @@
     <!-- Error messages-->
     <string name="detail_error_message">Sandwich data not available</string>
 
+    <string name="not_provided"> \tNot provided.</string>
+
     <string-array name="sandwich_names">
         <item>Ham and cheese sandwich</item>
         <item>Bosna</item>
@@ -101,7 +103,6 @@
             possible to use only a few spices (which many vendors do), the resulting meat is less
             flavourful.\",\"image\":\"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Roujiamo.jpg/800px-Roujiamo.jpg\",\"ingredients\":[\"Pork\",\"bread\"]}
         </item>
-        <!--TODO (1) There was a server error for the provided link of the image and I changed with the purpose of avoid that error-->
         <item>{\"name\":{\"mainName\":\"Shawarma\",\"alsoKnownAs\":[]},\"placeOfOrigin\":\"Middle East,
             Levant\",\"description\":\"Shawarma also spelled shawurma or shawerma, is a Levantine
             meat preparation, where lamb, chicken, turkey, beef, veal, or mixed meats are placed on

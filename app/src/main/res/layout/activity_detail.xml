@@ -16,7 +16,7 @@
         <ImageView
             android:id="@+id/image_iv"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/image_height"
             android:adjustViewBounds="true"
             android:contentDescription="@string/sandwich_picture_content_description"
             android:scaleType="centerCrop" />
@@ -25,13 +25,13 @@
          label and information-->
         <LinearLayout
             android:orientation="vertical"
-            android:padding="15dp"
+            android:padding="@dimen/padding_linear_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <!--"Also known as" label-->
             <TextView
-                android:textSize="20sp"
+                android:textSize="@dimen/text_size_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/detail_also_known_as_label"
@@ -40,7 +40,7 @@
             <!--"Also known as" information-->
             <TextView
                 android:id="@+id/also_known_tv"
-                android:textSize="20sp"
+                android:textSize="@dimen/text_size_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -49,7 +49,7 @@
         <!--Linear Layout that contains "Place of origin"
          label and information-->
         <LinearLayout
-            android:padding="15dp"
+            android:padding="@dimen/padding_linear_layout"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -58,14 +58,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="@dimen/text_size_tv"
                 android:text="@string/detail_place_of_origin_label"
                 android:textStyle="bold" />
 
             <!--"Place of origin" information-->
             <TextView
                 android:id="@+id/origin_tv"
-                android:textSize="20sp"
+                android:textSize="@dimen/text_size_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -75,13 +75,13 @@
          label and information-->
         <LinearLayout
             android:orientation="vertical"
-            android:padding="15dp"
+            android:padding="@dimen/padding_linear_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <!--"Description" label-->
             <TextView
-                android:textSize="20sp"
+                android:textSize="@dimen/text_size_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/detail_description_label"
@@ -90,7 +90,7 @@
             <!--"Description" information-->
             <TextView
                 android:id="@+id/description_tv"
-                android:textSize="20sp"
+                android:textSize="@dimen/text_size_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -99,14 +99,14 @@
         <!--Linear Layout that contains "Ingredients"
          label and information-->
         <LinearLayout
-            android:padding="15dp"
+            android:padding="@dimen/padding_linear_layout"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <!--"Ingredients" label-->
             <TextView
-                android:textSize="20sp"
+                android:textSize="@dimen/text_size_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/detail_ingredients_label"
@@ -115,7 +115,7 @@
             <!--"Ingredients" information-->
             <TextView
                 android:id="@+id/ingredients_tv"
-                android:textSize="20sp"
+                android:textSize="@dimen/text_size_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 

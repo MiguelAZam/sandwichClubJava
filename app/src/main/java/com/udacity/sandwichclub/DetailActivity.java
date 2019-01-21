@@ -29,11 +29,16 @@ public class DetailActivity extends AppCompatActivity {
     private TextView mIngredients;
     //Sandwich model to display information
     Sandwich sandwich;
+    //Error message in case of empty information
+    String errorMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+        //Get error message from strings.xml
+         errorMessage = getResources().getString(R.string.not_provided);
 
         //Get id's for views
         ImageView ingredientsIv = findViewById(R.id.image_iv); //Image
@@ -71,6 +76,7 @@ public class DetailActivity extends AppCompatActivity {
         //Load image
         Picasso.with(this)
                 .load(sandwich.getImage())
+                .placeholder(R.drawable.images)
                 .into(ingredientsIv);
 
         //Set title of app bar to the name of the clicked sandwich
@@ -87,9 +93,9 @@ public class DetailActivity extends AppCompatActivity {
     //Return "item1, item2, item3, item4." if list has a set of items (case 2)
     private String generateString(List<String> listOfStrings){
         //Check for (case 1)
-        if(listOfStrings == null) return "   Not provided.";
+        if(listOfStrings == null || listOfStrings.size() <1) return errorMessage;
         //(case 2)
-        String concat = "   "; //Indentation
+        String concat = "  "; //Indentation
         //For each item concat it to a single string
         for(String item: listOfStrings){
             concat = concat + item + ", ";
@@ -102,11 +108,11 @@ public class DetailActivity extends AppCompatActivity {
 
     private void populateUI() {
         //If place of origin is empty return "Unknown" otherwise return place of origin
-        String placeOfOrigin = sandwich.getPlaceOfOrigin().equals("")  ? " Unknown." : " " + sandwich.getPlaceOfOrigin();
+        String placeOfOrigin = sandwich.getPlaceOfOrigin().equals("")  ? errorMessage : " " + sandwich.getPlaceOfOrigin();
         //Generate string of list
         String otherNames = generateString(sandwich.getAlsoKnownAs());
         //If description is empty return "No description" otherwise return description
-        String description = sandwich.getDescription().equals("") ? "No description." : "   " + sandwich.getDescription();
+        String description = sandwich.getDescription().equals("") ? errorMessage : "   " + sandwich.getDescription();
         //Generate string of list
         String ingredients = generateString(sandwich.getIngredients());
 
